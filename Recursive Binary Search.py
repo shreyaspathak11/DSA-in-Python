@@ -1,5 +1,5 @@
 
-def binarySearch(nums: [int], low: int, high: int, target: int):
+def binarySearch(nums, low: int, high: int, target: int):
     if low > high:
         return -1  # Base case
     
@@ -11,7 +11,7 @@ def binarySearch(nums: [int], low: int, high: int, target: int):
         return binarySearch(nums, mid + 1, high, target)
     return binarySearch(nums, low, mid - 1, target)
 
-def search(nums: [int], target: int):
+def search(nums, target: int):
     return binarySearch(nums, 0, len(nums) - 1, target)
 
 if __name__ == "__main__":
